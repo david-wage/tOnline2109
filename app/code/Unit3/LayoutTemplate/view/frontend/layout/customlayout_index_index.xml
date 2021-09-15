@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <!-- if class parameter is not specified, magento by default will use:
+            Magento\Framework\View\Element\Template (magento verion > 2.2) -->
+            <block name="hello"
+                   template="Unit3_LayoutTemplate::hello.phtml"/>
+
+            <!-- when "template" paramenter is not specified, probably the block class
+            has a default template in "$_template" varaiable -->
+            <block name="helloblock"
+                   class="Unit3\LayoutTemplate\Block\Hello"/>
+
+            <!-- TODO: example of how to modify template of a block  -->
+            <referenceBlock name="helloblock" template="Unit3_LayoutTemplate::hello.phtml"/>
+
+        </referenceContainer>
+    </body>
+</page>

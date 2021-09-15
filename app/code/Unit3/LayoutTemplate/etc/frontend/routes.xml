@@ -1,0 +1,15 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <!--
+        url: {domain}/layouttemplate/index/index
+        layout file name: customlayout_index_index.xml
+
+        "id" parameter affects to layout files name
+        "frontName" affects to browser url
+        -->
+        <route id="customlayout" frontName="layouttemplate">
+            <module name="Unit3_LayoutTemplate"/>
+        </route>
+    </router>
+</config>
