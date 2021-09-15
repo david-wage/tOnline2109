@@ -8,6 +8,7 @@
                    template="Unit3_ViewModelDemo::viewmodel.phtml">
                 <arguments>
                     <argument name="hello_vm" xsi:type="object">Unit3\ViewModelDemo\ViewModel\HelloVM</argument>
+                    <argument name="bye_vm" xsi:type="object">Unit3\ViewModelDemo\ViewModel\ByeVM</argument>
                 </arguments>
             </block>
         </referenceContainer>

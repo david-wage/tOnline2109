@@ -1,11 +1,13 @@
 <?php
 // #1: magic method name
+/** @var \Unit3\ViewModelDemo\ViewModel\HelloVM $helloVM */
 $helloVM = $block->getHelloVm();
-
-//var_dump($helloVM); die;
-
 // #2: use getData();
 // $helloVM = $block->getData('hello_vm');
+
+/** @var Unit3\ViewModelDemo\ViewModel\ByeVM $byeVM */
+$byeVM = $block->getData('bye_vm');
 ?>
 <?= __FILE__ ?>
 <h1> <?= $helloVM->hello() ?> </h1>
+<h2><?= $byeVM->bye(); ?></h2>
