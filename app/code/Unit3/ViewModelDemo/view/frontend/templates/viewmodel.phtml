@@ -1,1 +1,11 @@
+<?php
+// #1: magic method name
+$helloVM = $block->getHelloVm();
+
+//var_dump($helloVM); die;
+
+// #2: use getData();
+// $helloVM = $block->getData('hello_vm');
+?>
 <?= __FILE__ ?>
+<h1> <?= $helloVM->hello() ?> </h1>
