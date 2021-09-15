@@ -4,6 +4,8 @@
         <referenceBlock name="customer_account_navigation">
             <block class="Magento\Customer\Block\Account\SortLinkInterface" name="customer-account-navigation-bonuses-link">
                 <arguments>
+                    <!-- path can use route's id, so when block generates the item,
+                    it will the id to get frontname -->
                     <argument name="path" xsi:type="string">customerbonusestab</argument>
                     <argument name="label" xsi:type="string" translate="true">Bonuses</argument>
                     <argument name="sortOrder" xsi:type="number">300</argument>
