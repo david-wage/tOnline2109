@@ -4,10 +4,9 @@
         <referenceBlock name="customer_account_navigation">
             <block class="Magento\Customer\Block\Account\SortLinkInterface" name="customer-account-navigation-bonuses-link">
                 <arguments>
-                    <!--   TODO: create an actionClass    -->
-                    <argument name="path" xsi:type="string">newsletter/manage</argument>
+                    <argument name="path" xsi:type="string">customerbonusestab</argument>
                     <argument name="label" xsi:type="string" translate="true">Bonuses</argument>
-                    <argument name="sortOrder" xsi:type="number">100</argument>
+                    <argument name="sortOrder" xsi:type="number">300</argument>
                 </arguments>
             </block>
         </referenceBlock>
