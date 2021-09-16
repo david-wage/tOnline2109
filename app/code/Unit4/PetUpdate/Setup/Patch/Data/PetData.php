@@ -35,6 +35,17 @@ class PetData implements DataPatchInterface
      */
     public function apply()
     {
+        $setup = $this->moduleDataSetup->getConnection();
+        $binds = [
+            ['customer_id' => 1, 'pet_name'=> 'Didi', 'pet_type' => 'Cat'],
+            ['customer_id' => 1, 'pet_name'=> 'Lala', 'pet_type' => 'Dog'],
+            ['customer_id' => 1, 'pet_name'=> 'Nene'],
+            ['pet_name'=> 'Dodo'],
+        ];
+        $petTbl = $setup->getTableName('pet');
+        foreach ($binds as $bind){
+            $setup->insertForce($petTbl,$bind);
+        }
     }
 
     /**
