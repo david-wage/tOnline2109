@@ -1,0 +1,17 @@
+{
+  "pet": {
+    "column": {
+      "pet_id": true,
+      "customer_id": true,
+      "pet_name": true,
+      "created_at": true,
+      "updated_at": true
+    },
+    "index": {
+      "PET_PET_ID": true
+    },
+    "constraint": {
+      "PRIMARY": true
+    }
+  }
+}

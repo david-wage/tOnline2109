@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="pet" resource="default" engine="innodb" comment="Pet Table">
+        <column xsi:type="int" name="pet_id" unsigned="true" nullable="false" identity="true"/>
+        <column xsi:type="int" name="customer_id" unsigned="true" nullable="true" identity="false"/>
+        <column xsi:type="varchar" name="pet_name" nullable="true" length="128"/>
+        <column xsi:type="timestamp" name="created_at" nullable="false" on_update="false"/>
+        <column xsi:type="timestamp" name="updated_at" nullable="false" on_update="true"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="pet_id"/>
+        </constraint>
+        <index referenceId="PET_PET_ID" indexType="btree">
+            <column name="pet_id"/>
+        </index>
+    </table>
+</schema>
