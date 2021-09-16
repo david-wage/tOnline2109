@@ -30,6 +30,9 @@ class Index  extends \Magento\Framework\App\Action\Action
         /** @var \Unit4\PetModel\Model\Pet $petModel */
         $petModel = $this->petFactory->create();
         $this->petResource->load($petModel, 1);
+        // laod model information based in custom column/field
+        // $this->petResource->load($petModel, 'Lala', 'pet_name');
+
         // Print values
         echo "<pre>";
         var_export($petModel->getData());
