@@ -21,7 +21,7 @@ class Index extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $petType = $this->getRequest()->getParam('pet_type');
-        var_dump($petType);
+//        var_dump($petType);
         // TODO: implement getPetCollectionByType
         $petCollection = $this->getPetCollectionByType($petType);
         $resultJson = $this->resultFactory->create(ResultFactory::TYPE_JSON);
@@ -32,6 +32,11 @@ class Index extends \Magento\Framework\App\Action\Action
     {
         /** @var \Unit4\PetModel\Model\ResourceModel\Pet\Collection $petCollection */
         $petCollection = $this->collectionFactory->create();
+//        $petCollection->addFilter('','','','')
+        $petCollection->addFieldToFilter('pet_type', $petType)
+        ->setOrder('pet_id', 'DESC')
+        ->setPageSize(2)
+        ->setCurPage(2);
         return $petCollection->getData();
     }
 }
