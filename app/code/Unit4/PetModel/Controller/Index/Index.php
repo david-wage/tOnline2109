@@ -1,5 +1,5 @@
 <?php
-namespace Unit4\Unit4\PetModel\Controller\Index;
+namespace Unit4\PetModel\Controller\Index;
 
 class Index  extends \Magento\Framework\App\Action\Action
 {

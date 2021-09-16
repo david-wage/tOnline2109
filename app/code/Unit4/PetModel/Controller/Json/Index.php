@@ -1,5 +1,5 @@
 <?php
-namespace Unit4\Unit4\PetModel\Controller\Json;
+namespace Unit4\PetModel\Controller\Json;
 
 use Magento\Framework\Controller\ResultFactory;
 
