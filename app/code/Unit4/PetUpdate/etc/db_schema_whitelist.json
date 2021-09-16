@@ -1,0 +1,7 @@
+{
+  "pet": {
+    "column": {
+      "pet_type": true
+    }
+  }
+}
