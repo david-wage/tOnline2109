@@ -1,12 +1,24 @@
 <?php
 namespace Unit4\ServiceContracts\Controller\Customer;
-use Magento\Framework\App\Action\Action;
 
-class Repo extends Action
+class Repo extends \Magento\Framework\App\Action\Action
 {
+    /**
+     * @var \Magento\Customer\Api\CustomerRepositoryInterface
+     */
+    private $customerRepository;
+
+    public function __construct(
+        \Magento\Framework\App\Action\Context$context,
+        \Magento\Customer\Api\CustomerRepositoryInterface $customerRepository
+    )
+    {
+        parent::__construct($context);
+        $this->customerRepository = $customerRepository;
+    }
 
     public function execute()
     {
-        // TODO: Implement execute() method.
+        // TODO: load and modify customer
     }
 }

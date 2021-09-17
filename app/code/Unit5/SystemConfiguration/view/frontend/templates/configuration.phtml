@@ -1,0 +1,18 @@
+<?php
+$configVM = $block->getData('config_vm');
+?>
+
+<table>
+    <tr>
+        <th>Type</th><th>Value</th>
+    </tr>
+    <tr>
+        <th>YesNo</th><th><?= $configVM->getYesNoConfig() ?></th>
+    </tr>
+    <tr>
+        <th>FilePath</th><th><?= $configVM->getPdfFilePath() ?></th>
+    </tr>
+    <tr>
+        <th>Encrypted</th><th><?= $configVM->getDecryptedPassword() ?></th>
+    </tr>
+</table>

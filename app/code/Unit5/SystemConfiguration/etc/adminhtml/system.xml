@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <!-- Add New Tab: "Unit 5 Tab" -->
+        <tab id="unit5tab" translate="label">
+            <label>Unit 5 Tab</label>
+        </tab>
+
+        <!-- Add New Section: "Unit 5 Section"   -->
+        <section id="unit5section" translate="label" sortOrder="100">
+            <label>Unit 5 Section</label>
+            <tab>unit5tab</tab>
+
+            <!-- Add New Group: "Unit 5 Group"  -->
+            <group id="unit5group" translate="label" sortOrder="10">
+                <!-- Add New YesNo Field: "Yes No"
+                 Refers to: vendor/magento/module-dhl/etc/adminhtml/system.xml <field id="active"
+                 -->
+                <field id="yesno" translate="label" sortOrder="10"
+                       showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>YesNo</label>
+                </field>
+                <!-- Add New Password Field: "Password"
+                Refers to: vendor/magento/module-dhl/etc/adminhtml/system.xml <field id="password"
+                -->
+                <field id="password" translate="label" sortOrder="20"
+                       showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Password</label>
+                </field>
+                <!-- Add New Fiel Field: "PDF"
+                  Refers To: vendor/magento/module-sales/etc/adminhtml/system.xml <field id="logo"
+                  -->
+                <field id="pdf_file" translate="label" sortOrder="30"
+                       showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>PDF File</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
