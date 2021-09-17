@@ -5,7 +5,14 @@
     <acl>
         <resources>
             <!--  Use as example: vendor/magento/module-sales/etc/acl.xml: <resource id="Magento_Sales::sales_operation"  -->
-
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Sales::sales">
+                    <resource id="Unit5_AdminController::admincontroller"
+                              title="Admin Controller"
+                              translate="tittle"
+                              sortOrder="10"/>
+                </resource>
+            </resource>
         </resources>
     </acl>
 </config>
