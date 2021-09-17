@@ -9,18 +9,25 @@
         </tab>
 
         <!-- Add New Section: "Unit 5 Section"   -->
-        <section id="unit5section" translate="label" sortOrder="100">
+        <section id="unit5section" translate="label" sortOrder="100"
+                 showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Unit 5 Section</label>
             <tab>unit5tab</tab>
+            <!--  Important configuration to make this seccion available fro the admin user -->
+            <resource>Magento_Sales::sales</resource>
 
             <!-- Add New Group: "Unit 5 Group"  -->
-            <group id="unit5group" translate="label" sortOrder="10">
+            <group id="unit5group" translate="label" sortOrder="10"
+                showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Unit 5 Group</label>
+
                 <!-- Add New YesNo Field: "Yes No"
                  Refers to: vendor/magento/module-dhl/etc/adminhtml/system.xml <field id="active"
                  -->
-                <field id="yesno" translate="label" sortOrder="10"
+                <field id="yesno" type="select" translate="label" sortOrder="10"
                        showInDefault="1" showInStore="1" showInWebsite="1">
                     <label>YesNo</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
                 <!-- Add New Password Field: "Password"
                 Refers to: vendor/magento/module-dhl/etc/adminhtml/system.xml <field id="password"

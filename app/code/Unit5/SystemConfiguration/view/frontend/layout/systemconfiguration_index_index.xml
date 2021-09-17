@@ -4,11 +4,11 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
-            <referenceBlock name="sysconf" template="Unit5_SystemConfiguration::configuration.phtml">
+            <block name="sysconf" template="Unit5_SystemConfiguration::configuration.phtml">
                 <arguments>
                     <argument name="config_vm" xsi:type="object">Unit5\SystemConfiguration\ViewModel\ConfigVM</argument>
                 </arguments>
-            </referenceBlock>
+            </block>
         </referenceContainer>
     </body>
 </page>
