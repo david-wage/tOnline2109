@@ -4,6 +4,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
     <acl>
         <resources>
+            <!--  Use as example: vendor/magento/module-sales/etc/acl.xml: <resource id="Magento_Sales::sales_operation"  -->
 
         </resources>
     </acl>
