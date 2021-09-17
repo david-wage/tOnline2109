@@ -35,27 +35,32 @@ class Repo extends \Magento\Framework\App\Action\Action
         $this->sortOrderBuilder = $sortOrderBuilder;
     }
 
+    // servicecontracts/product/repo
     public function execute()
     {
         $filter = $this->filterBuilder
             // Todo: apply filter rules
+            ->setField('name')
+            ->setConditionType('like')
+            ->setValue('%hoodie%')
             ->create();
 
         $sortOrder = $this->sortOrderBuilder
             // TODO: add sortOrder rules
+            ->setField('entity_id')
+            ->setDescendingDirection()
             ->create();
 
         $searchCriteria = $this->searchCriteriaBuilder
             ->addFilters([$filter])
             ->addSortOrder($sortOrder)
             // TODO: test other options like setPageSize, setCurPage
-            //->setPageSize(10)
-            //->setCurrentPage(2)
+            ->setPageSize(10)
+            ->setCurrentPage(2)
             ->create();
 
-        $productList = $this->productRepository->getList($searchCriteria)
-            ->getItems();
-
+        $productList = $this->productRepository->getList($searchCriteria)->getItems();
+        echo "<pre>";
         // Print id and name on front
         foreach ($productList as $product) {
             var_dump($product->getId() . ": ". $product->getName());
