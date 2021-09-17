@@ -17,8 +17,14 @@ class Repo extends \Magento\Framework\App\Action\Action
         $this->customerRepository = $customerRepository;
     }
 
+    // servicecontracts/customer/repo
     public function execute()
     {
+        echo __METHOD__;
+        $randString = str_shuffle('qwertyuiop');
         // TODO: load and modify customer
+        $customerDataModel = $this->customerRepository->getById(1);
+        $customerDataModel->setFirstname("Vero{$randString}");
+        $this->customerRepository->save($customerDataModel);
     }
 }
