@@ -32,7 +32,7 @@ class AddNetWorthCategoryAttribute implements DataPatchInterface
      */
     private $eavConfig;
     /**
-     * @var \TrainingEssentialsUnit6\NetWorth\Api\CategoryNetWorthManagementInterface
+     * @var \Unit6\NetWorth\Api\CategoryNetWorthManagementInterface
      */
     private $netWorthManagement;
 
