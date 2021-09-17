@@ -6,9 +6,10 @@ use Magento\Framework\View\Element\Block\ArgumentInterface;
 
 class ConfigVM implements ArgumentInterface
 {
-    const XML_YESNO_CONFIG_PATH ='';
-    const XML_PDFFILE_CONFIG_PATH ='';
-    const XML_PASSWORD_CONFIG_PATH ='';
+    const XML_YESNO_CONFIG_PATH ='unit5section/unit5group/yesno';
+    const XML_PDFFILE_CONFIG_PATH ='unit5section/unit5group/pdf_file';
+    const XML_PASSWORD_CONFIG_PATH ='unit5section/unit5group/password';
+
     /**
      * @var \Magento\Framework\App\Config\ScopeConfigInterface
      */
@@ -28,15 +29,15 @@ class ConfigVM implements ArgumentInterface
     }
 
     public function getYesNoConfig() {
-        return $this->scopeConfig->getValue('');
+        return $this->scopeConfig->getValue(self::XML_YESNO_CONFIG_PATH);
     }
 
     public function getPdfFilePath() {
-        return $this->scopeConfig->getValue('');
+        return $this->scopeConfig->getValue(self::XML_PDFFILE_CONFIG_PATH);
     }
 
     public function getDecryptedPassword() {
-        $encryptedPassword = $this->scopeConfig->getValue('');
+        $encryptedPassword = $this->scopeConfig->getValue(self::XML_PASSWORD_CONFIG_PATH);
         return $this->encryptor->decrypt($encryptedPassword);
     }
 }

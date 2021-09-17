@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="clothing_material" resource="default" engine="innodb" comment="">
+        <column xsi:type="int" name="material_id" unsigned="true" nullable="false" identity="true"
+                comment="Material ID"/>
+        <column xsi:type="varchar" name="material" nullable="false" length="255" comment="Material"/>
+        <column xsi:type="int" name="count" unsigned="true" nullable="false" identity="false" default="0"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="material_id"/>
+        </constraint>
+        <index referenceId="CLOTHING_MATERIAL_MATERIAL_ID" indexType="btree">
+            <column name="material_id"/>
+        </index>
+    </table>
+</schema>

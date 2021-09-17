@@ -1,0 +1,15 @@
+{
+  "clothing_material": {
+    "column": {
+      "material_id": true,
+      "material": true,
+      "count": true
+    },
+    "index": {
+      "CLOTHING_MATERIAL_MATERIAL_ID": true
+    },
+    "constraint": {
+      "PRIMARY": true
+    }
+  }
+}
