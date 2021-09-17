@@ -4,6 +4,15 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
+<!--   File that creates Sales menu item is at: vendor/magento/module-sales/etc/adminhtml/menu.xml     -->
+
+        <add id="Unit5_AdminController::admincontroller"
+             title="Admin Controller" translate="title"
+             module="Unit5_AdminController"
+             sortOrder="20" action="admincontroller/index/index"
+             parent="Magento_Sales::sales"
+             resource="Magento_Sales::sales_operation" /> <!--        TODO: update resource -->
+
 
     </menu>
 </config>
