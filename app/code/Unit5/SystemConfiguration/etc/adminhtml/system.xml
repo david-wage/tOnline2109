@@ -40,10 +40,19 @@
                 <!-- Add New Fiel Field: "PDF"
                   Refers To: vendor/magento/module-sales/etc/adminhtml/system.xml <field id="logo"
                   -->
-                <field id="pdf_file" translate="label" sortOrder="30"
+                <field id="pdf_file" type="file" translate="label" sortOrder="30"
                        showInDefault="1" showInStore="1" showInWebsite="1">
                     <label>PDF File</label>
+                    <backend_model>Unit5\SystemConfiguration\Model\Config\Backend\Pdf</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">pdf</upload_dir>
                 </field>
+
+                <field id="key" type="password" translate="label" sortOrder="20"
+                       showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Key</label>
+                    <comment>This only show "***" in admin field, but in core_config_data table the plain value is stored </comment>
+                </field>
+
             </group>
         </section>
     </system>
