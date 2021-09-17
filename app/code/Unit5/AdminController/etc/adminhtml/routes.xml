@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <!--  For admin configuration we use  <router id="admin"> instead of <router id="standard">  -->
+    <router id="admin">
+        <route id="admincontroller" frontName="admincontroller">
+            <module name="Unit5_AdminController"/>
+        </route>
+    </router>
+</config>
