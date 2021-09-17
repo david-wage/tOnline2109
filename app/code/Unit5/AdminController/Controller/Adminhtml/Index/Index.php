@@ -7,10 +7,8 @@ use Magento\Framework\Controller\ResultFactory;
 
 class Index extends \Magento\Backend\App\Action
 {
-
     // Specify the ACL rule for this action Class
-    const ADMIN_RESOURCE = '';
-
+    const ADMIN_RESOURCE = 'Unit5_AdminController::admincontroller';
 
     // {m2domain}/{adminroute}/
     // admincontroller/index/index
